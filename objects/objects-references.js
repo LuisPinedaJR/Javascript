@@ -1,4 +1,4 @@
-// Expess Tracker build
+// Expense Tracker build
 let myAccount = {
     name: 'Luis',
     expenses: 0,
