@@ -30,8 +30,8 @@ console.log(`You got a ${score}!`)
 
 /// 2nd Grade Calculator
 // is better syntax and less code to write
-let gradeCalc = function(score, totalScore){
-    let percent = (score / totalScore) * 100
+const gradeCalc = function(score, totalScore){
+    const percent = (score / totalScore) * 100
     let letterGrade = ''
 
     if (percent >= 90) {
@@ -48,5 +48,5 @@ let gradeCalc = function(score, totalScore){
 
     return `You got a ${letterGrade} (${percent}%)!`
 }
-let result = gradeCalc(83, 100)
+const result = gradeCalc(83, 100)
 console.log(result)
