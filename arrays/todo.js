@@ -16,3 +16,11 @@ todos.forEach(function(todo, index){ // passing a function in a function also ca
 })
 // console.log(`Todo: ${todo[0]}, ${todo[3]}`) 
 
+// for(let count = 0; count < todos.length; count++){
+//     const num = count + 1
+//     const todo = todos[count]
+//     console.log(`${num}. ${todo}`)
+// }
+
+
+/// the for statement is used when counting is not in order but when in order its best to use forEach //////
