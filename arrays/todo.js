@@ -19,20 +19,29 @@ const todos = [{
     completed: false
 }]
 
-/// find a specifi item delete it
-const deleteTodo = function(todos, todoText){
-    const index = todos.findIndex(function (todo){
-        return todo.text.toLowerCase() === todoText.toLowerCase()
+const getThigsToDo = function(todos){
+    return todos.filter(function(todos){
+        return !todos.completed
     })
-    /// if there is a match it will 1 and if theres is no match console will return -1 so
-    // here we use index > -1 to find match
-    if(index > -1){
-        todos.splice(index, 1) /// splice is used to delete the matched item from the object above.
-    }
 }
 
-deleteTodo(todos, 'buy food') // functioned called and arguments passed.
-console.log(todos) //logs to console results.
+console.log(getThigsToDo(todos))
+
+/////////////////////////////////////////////////
+/// find a specific item delete it
+// const deleteTodo = function(todos, todoText){
+//     const index = todos.findIndex(function (todo){
+//         return todo.text.toLowerCase() === todoText.toLowerCase()
+//     })
+//     /// if there is a match it will 1 and if theres is no match console will return -1 so
+//     // here we use index > -1 to find match
+//     if(index > -1){
+//         todos.splice(index, 1) /// splice is used to delete the matched item from the object above.
+//     }
+// }
+
+// deleteTodo(todos, 'buy food') // functioned called and arguments passed.
+// console.log(todos) //logs to console the results.
 
 
 ////////////////////////////////////////////
