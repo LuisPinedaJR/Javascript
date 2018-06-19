@@ -10,7 +10,7 @@ todos.shift()
 
 console.log(`You have ${todos.length} todos!`)
 
-todos.forEach(function(todo, index){
+todos.forEach(function(todo, index){ // passing a function in a function also called callback
     const num = index + 1
     console.log(`${num}. ${todo}`)
 })
