@@ -1,19 +1,4 @@
-const todos = [{
-    text: 'eat',
-    completed: true
-}, {
-    text: 'gym',
-    completed: false
-}, {
-    text: 'Buy Food',
-    completed: true
-}, {
-    text: 'walk the dog',
-    completed: true
-}, {
-    text: 'eat again',
-    completed: false
-}]
+let todos = []
 
 // you have 2 todos left (p element)
 // Add a p for each todo above (use text value)
@@ -21,6 +6,13 @@ const todos = [{
 const filters = {
     searchText: '',
     hideCompleted: false
+}
+
+
+const todosJSON = localStorage.getItem('todos')
+
+if(todosJSON !== null){
+    todos = JSON.parse(todosJSON)
 }
 
 const renderTodos = function(todos, filters){
@@ -67,6 +59,7 @@ document.querySelector('#add-form').addEventListener('submit', function(e){
         text: e.target.elements.addedTodo.value,
         completed: false
     })
+    localStorage.setItem('todos', JSON.stringify(todos))
     renderTodos(todos, filters)
     e.target.elements.addedTodo.value = ''
 })
