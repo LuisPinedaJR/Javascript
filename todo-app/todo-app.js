@@ -18,6 +18,7 @@ document.querySelector('#search-text').addEventListener('input', function(e){
 document.querySelector('#add-form').addEventListener('submit', function(e){
     e.preventDefault()
     todos.push({
+        id: uuidv4(),
         text: e.target.elements.addedTodo.value,
         completed: false
     })
