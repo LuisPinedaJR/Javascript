@@ -63,3 +63,8 @@ const renderedNotes = function(notes, filters){
     })
     
 }
+
+// Generate the last edited mesasge
+const generateLastEdited = function(timestamp){
+    return `Last edited ${moment(timestamp).fromNow()}`
+}
