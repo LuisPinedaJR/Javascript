@@ -1,3 +1,4 @@
+// Arrow functions 
 const square = (num) => num * num
 
 
