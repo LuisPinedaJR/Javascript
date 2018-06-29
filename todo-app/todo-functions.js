@@ -65,7 +65,7 @@ const generateTodoDOM = (todo) => {
     // setups the remove button
     removeButton.textContent = 'x'
     todoEl.appendChild(removeButton)
-    removeButton.addEventListener('click', (e) =>{
+    removeButton.addEventListener('click', (e) => {
         removeTodo(todo.id)
         saveTodos(todos)
         renderTodos(todos, filters)
@@ -73,7 +73,7 @@ const generateTodoDOM = (todo) => {
     return todoEl
 }
 // get the DOM elements for list summary
-const generateSummaryDOM = (incompleteTodos) =>{
+const generateSummaryDOM = (incompleteTodos) => { 
     const summary = document.createElement('h2')
     summary.textContent = `You have ${incompleteTodos.length} todos left`
     return summary
