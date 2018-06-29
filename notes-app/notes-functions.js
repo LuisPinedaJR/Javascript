@@ -1,4 +1,4 @@
-// read existing note from storage
+// read existing note from storage // ? : below
 const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes')
     return notesJSON !== null ? JSON.parse(notesJSON) : []
