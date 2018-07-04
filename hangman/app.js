@@ -1,15 +1,14 @@
-// primitive values: string, number, boolean, null, undefined
+const puzzleEl = document.querySelector('#puzzle')
+const guessesEl = document.querySelector('#guesses')
+const game1 = new Hangman('cat', 2)
 
-// Object: myobject --> Object.prototype --> null
-// Array: myarray --> Array.prototype --> Object.prototype --> null
-// Function: myFunc --> Function.prototype --> Object.prototype --> null
+puzzleEl.textContent = game1.getPuzzle()
+guessesEl.textContent = game1.remainingGuesses
 
-// const team = new Array(['Luke', 'Medison'])
-// console.log(team.hasOwnProperty('filter'))
+window.addEventListener('keypress', function (e){
+   const guess =  String.fromCharCode(e.charCode)
+    game1.makeGuess(guess)
+    puzzleEl.textContent = game1.getPuzzle()
+    guessesEl.textContent = game1.remainingGuesses
 
-
-const product = 'Computer'
-console.log(product.split(''))
-
-const otherProduct = new String('Phone')
-console.log(otherProduct)
+})
