@@ -1,13 +1,15 @@
 // primitive values: string, number, boolean, null, undefined
 
-// product --> Object.prototype --> null
-const product = new Object({
-    name: 'influence'
+// Object: myobject --> Object.prototype --> null
+// Array: myarray --> Array.prototype --> Object.prototype --> null
+// Function: myFunc --> Function.prototype --> Object.prototype --> null
 
-})
+// const team = new Array(['Luke', 'Medison'])
+// console.log(team.hasOwnProperty('filter'))
 
-Object.prototype.someNewMethod = () => 'This is the new function'
 
-// hasownproperty
-console.log(product.someNewMethod())
-console.log(product)
+const product = 'Computer'
+console.log(product.split(''))
+
+const otherProduct = new String('Phone')
+console.log(otherProduct)
