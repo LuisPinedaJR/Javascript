@@ -1,3 +1,5 @@
+'use strict'
+
 // DOM - document object model
 
 // Query and remove

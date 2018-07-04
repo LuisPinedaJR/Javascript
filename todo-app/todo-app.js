@@ -1,3 +1,5 @@
+'use strict'
+
 let todos = getSavedTodos()
 
 // you have 2 todos left (p element)
