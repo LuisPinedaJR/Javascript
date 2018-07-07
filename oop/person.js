@@ -1,5 +1,13 @@
 // prototypal inheritance 
 
+class PersonClass {
+    
+}
+
+const myPerson = new PersonClass()
+console.log(myPerson)
+
+
 const Person = function (firstName, lastName, age, likes = []){
     this.firstName = firstName
     this.lastName = lastName
