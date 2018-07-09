@@ -16,7 +16,7 @@ class Hangman {
             this.status = 'playing'
         }
     }
-    getStatusMessage(){
+    get StatusMessage(){
         if(this.status == 'playing'){
             return `Guesses left: ${this.remainingGuesses}`
         }else if(this.status == 'failed'){
@@ -25,7 +25,7 @@ class Hangman {
             return 'Great Work! You guessed the work.'
         }
     }
-    getPuzzle(){
+    get Puzzle(){
         let puzzle = ''
 
         this.word.forEach((letter)=>{

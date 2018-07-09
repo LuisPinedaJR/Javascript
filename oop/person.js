@@ -16,10 +16,13 @@ class Person {
 
     return bio
     }
-    setName(fullName){
+    set fullName(fullName){
         const names = fullName.split(' ') // add space because setName needs to split at space between two names
         this.firstName = names[0]
         this.lastName = names[1]
+    }
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
     }
 }
 
@@ -29,7 +32,7 @@ class Employee extends Person {
         this.position = position
     }
     getBio(){
-        return `${this.firstName} ${this.lastName} is a ${this.position}.`
+        return `${this.fullName} is a ${this.position}.`
         // Luis is a Student -> specific for employees
     }
     getYearsLeft(){
@@ -51,9 +54,10 @@ class Student extends Person {
     }
 }
 
-const me = new Student('Luis', 'Pineda',30 ,88, [])
-me.updateGrade(-10)
+const me = new Employee('Luis', 'Pineda',30, 'Engineer', [])
+me.fullName = 'Clancey Turner'
 console.log(me.getBio())
+
 
 // const me = new Employee('Luis', 'Pineda', 30, 'Student', ['Learning', 'Music'])
 // me.setName('Alexis Turner')
