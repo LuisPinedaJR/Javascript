@@ -25,7 +25,7 @@ class Hangman {
             return 'Great Work! You guessed the work.'
         }
     }
-    getPuzzle(word){
+    getPuzzle(){
         let puzzle = ''
 
         this.word.forEach((letter)=>{

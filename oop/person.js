@@ -1,5 +1,5 @@
 // prototypal inheritance 
-
+// myPerson --> person.prototype --> Object.prototype --> null
 
 class Person {
     constructor(firstName, lastName, age, likes = []){
@@ -23,10 +23,42 @@ class Person {
     }
 }
 
+class Employee extends Person {
+    constructor(firstName, lastName, age, position, likes) {
+        super(firstName, lastName, age, likes)
+        this.position = position
+    }
+    getBio(){
+        return `${this.firstName} ${this.lastName} is a ${this.position}.`
+        // Luis is a Student -> specific for employees
+    }
+    getYearsLeft(){
+        return `Employee has ${65 - this.age} years left with company`
+    }
+}
 
-const me = new Person('Luis', 'Pineda', 30, ['Learning', 'Music'])
-me.setName('Alexis Turner')
+class Student extends Person {
+    constructor(firstName, lastName, age, grade, likes){
+        super(firstName, lastName, age, likes)
+        this.grade = grade
+    }
+    updateGrade(change){
+       this.grade += change
+    }
+    getBio(){
+        const status = this.grade >= 70 ? 'passing' : 'failing'
+        return `${this.firstName} is ${status} the class.`
+    }
+}
+
+const me = new Student('Luis', 'Pineda',30 ,88, [])
+me.updateGrade(-10)
 console.log(me.getBio())
 
-const person2 = new Person('clancey', 'Turner', 35)
-console.log(person2.getBio())
+// const me = new Employee('Luis', 'Pineda', 30, 'Student', ['Learning', 'Music'])
+// me.setName('Alexis Turner')
+// console.log(me.getBio())
+// console.log(me.getYearsLeft())
+
+// const person2 = new Person('clancey', 'Turner', 35)
+// console.log(person2.getBio())
