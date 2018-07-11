@@ -27,8 +27,14 @@ getPuzzle((error, puzzle)=>{   // <------------------- callback pattern 2
     }
 })
 
+getCountry("SV", (error, country) => {
+    if(error){
+        console.log(error)
+    }else{
+        console.log(`Country name: ${country.name}`)
+    }
+})
 
-// making an HTTP request
 
 
 // const countryCode = "US"
