@@ -19,21 +19,18 @@ window.addEventListener('keypress', function (e){
     
 })
 
-getPuzzle((error, puzzle)=>{   // <------------------- callback pattern 2
-    if(error){
-        console.log(`Error: ${error}`)
-    }else{
-        console.log(puzzle)
-    }
+getPuzzle('2').then((puzzle)=>{
+    console.log(puzzle)
+}, (err) => {
+    console.log(`error: ${err}`)
 })
 
-getCountry("SV", (error, country) => {
-    if(error){
-        console.log(error)
-    }else{
-        console.log(`Country name: ${country.name}`)
-    }
-})
+
+getCountry("SV").then((country) => {
+        console.log(country.name)
+}, (err) => {
+        console.log(`Error: ${err}`)
+    })
 
 
 
