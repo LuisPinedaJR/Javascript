@@ -26,11 +26,11 @@ window.addEventListener('keypress', function (e){
     })
 
 
-    // getCountry("SV").then((country) => {
-    //         console.log(country.name)
-    // }, (err) => {
-    //         console.log(`Error: ${err}`)
-    //     })
+    getCountry("SV").then((country) => {
+            console.log(country)
+    }).catch((err) => {
+            console.log(`Error: ${err}`)
+        })
 
 
 
