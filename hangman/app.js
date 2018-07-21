@@ -25,13 +25,13 @@ window.addEventListener('keypress', function (e){
         console.log(`error: ${err}`)
     })
 
-
-    getCountry("SV").then((country) => {
-            console.log(country)
-    }).catch((err) => {
-            console.log(`Error: ${err}`)
-        })
-
+    getLocation().then((location)=>{
+        return getCountry(location.country)
+    }).then((country)=>{
+        console.log(country)
+    }).catch((err)=>{
+        console.log(`Error:${err}`)
+    }) 
 
 
 // fetch('http://puzzle.mead.io/puzzle', {}).then((response) =>{
