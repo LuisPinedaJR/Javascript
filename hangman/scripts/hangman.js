@@ -36,6 +36,7 @@ class Hangman {
         }
     })
         return puzzle 
+        
     }
     makeGuess(guess){
         guess = guess.toLowerCase()
